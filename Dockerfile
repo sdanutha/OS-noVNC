@@ -1,6 +1,9 @@
 # base image
 FROM nvidia/cuda:10.2-runtime-ubuntu16.04
 
+# maintainer
+LABEL maintainer "SDANUTHA <s.danutha@gmail.com>"
+
 # create new USER
 ENV DEBIAN_FRONTEND noninteractive
 ENV USER ubuntu
@@ -22,16 +25,11 @@ RUN apt-get install -y --no-install-recommends \
         gnome-terminal \
         metacity \
         nautilus \
-        gedit \
         sudo \
         supervisor \
         net-tools \
-        git
-
-# clear
-RUN apt-get autoclean \
-        && apt-get autoremove \
-            && rm -rf /var/lib/apt/lists/*
+        git \
+    && rm -rf /var/lib/apt/lists/*
 
 # tigerVNC
 ADD https://dl.bintray.com/tigervnc/stable/tigervnc-1.9.0.x86_64.tar.gz $HOME/tigervnc/tigervnc.tar.gz
