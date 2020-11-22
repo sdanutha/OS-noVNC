@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8
 ENV LANG en_US.utf8
 
-# unity
+# unity and dependency
 RUN apt-get install -y --no-install-recommends \
         ubuntu-desktop \
         unity-lens-applications \
@@ -23,14 +23,10 @@ RUN apt-get install -y --no-install-recommends \
         metacity \
         nautilus \
         gedit \
-        sudo
-
-# dependency
-RUN apt-get install -y --no-install-recommends \
+        sudo \
         supervisor \
         net-tools \
-        git \
-        pwgen
+        git
 
 # clear
 RUN apt-get autoclean \
