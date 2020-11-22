@@ -4,10 +4,9 @@ FROM nvidia/cuda:10.2-runtime-ubuntu16.04
 # maintainer
 LABEL maintainer "SDANUTHA <s.danutha@gmail.com>"
 
-# environment
+# create new USER
 ENV DEBIAN_FRONTEND noninteractive
 
-# create new USER
 ENV USER ubuntu
 ENV HOME /home/ubuntu
 
@@ -18,7 +17,6 @@ RUN apt-get update \
         && apt-get install -y --no-install-recommends \
             locales \
             ubuntu-desktop \
-            unity-lens-applications \
             gnome-panel \
             gnome-terminal \
             metacity \
