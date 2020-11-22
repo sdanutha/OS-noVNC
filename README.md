@@ -12,7 +12,7 @@
 
 ``` run : os-novnc ```
 ```
-    docker run --name=ciracore --restart=always -d \
+    docker run --name=ubuntu-16.04-cuda-10.2 --restart=always -d \
         -p 6080:6080 \
         -e PASSWORD=ciracore \
         -e SUDO=yes \
