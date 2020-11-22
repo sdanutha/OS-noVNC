@@ -1,5 +1,8 @@
+# argument
+ARG IMAGE
+
 # base image
-FROM nvidia/cuda:10.2-runtime-ubuntu16.04
+FROM $IMAGE
 
 # maintainer
 LABEL maintainer "SDANUTHA <s.danutha@gmail.com>"

@@ -1,6 +1,7 @@
 ``` cmd : build ```
 ```
-    docker build -t os-novnc .
+    docker build -t os-novnc \
+        --build-arg IMAGE=nvidia/cuda:10.2-runtime-ubuntu16.04 .
 ```
 
 ``` cmd run ```
