@@ -8,7 +8,7 @@
 ```
     docker run -d --name=on-vnc --restart=always \
         -p 6080:6080 \
-        -e PASSWORD=sdanutha \
+        -e PASSWORD=ubuntu \
         -e SUDO=yes \
         --privileged os-novnc
 ```

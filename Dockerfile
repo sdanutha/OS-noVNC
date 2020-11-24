@@ -55,8 +55,5 @@ COPY config/xsession $HOME/.xsession
 # Set startup script
 COPY config/startup.sh $HOME
 
-# expose
-EXPOSE 6080
-
 # run
 CMD [ "/bin/bash", "/home/ubuntu/startup.sh" ]
